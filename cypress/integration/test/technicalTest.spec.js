@@ -15,8 +15,8 @@ describe('prueba-tecnica', () => {
     const contactUsPage = new ContactUsPage();
 
     it('passes', () => {
-        homePage.visit()
-               .selectProduct('Pure Cotton V-Neck T-Shirt');
+        homePage.visit();
+        homePage.selectProduct('Pure Cotton V-Neck T-Shirt');
         
         productPage.addProductToCart('30');
         cartPage.viewCart()

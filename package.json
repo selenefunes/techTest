@@ -4,12 +4,13 @@
   "description": "Challenge",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run", 
-    "test:ci": "cypress run --headless" 
+    "test": "cypress run",
+    "test:ci": "cypress run --headless"
   },
   "author": "Emma",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^13.6.3"
+    "cypress": "^13.6.3",
+    "dotenv": "^16.4.1"
   }
 }
