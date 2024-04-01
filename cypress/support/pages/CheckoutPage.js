@@ -1,6 +1,6 @@
 class CheckoutPage {
     proceedToCheckout() {
-        cy.contains('Proceed To Checkout').click();
+        cy.contains('u', 'Register / Login').click();
         return this;
     }
 

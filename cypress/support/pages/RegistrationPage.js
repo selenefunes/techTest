@@ -9,7 +9,7 @@ class RegistrationPage {
         cy.get('[data-qa="days"]').select(details.dayOfBirth);
         cy.get('[data-qa="months"]').select(details.monthOfBirth);
         cy.get('[data-qa="years"]').select(details.yearOfBirth);
-        cy.get('[data-qa="first_name"]').type(details.firstName);
+        cy.get('[data-qa="first_name"]').type(details.name);
         cy.get('[data-qa="last_name"]').type(details.lastName);
         cy.get('[data-qa="company"]').type(details.company);
         cy.get('[data-qa="address"]').type(details.address);

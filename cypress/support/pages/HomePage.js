@@ -9,6 +9,5 @@ class HomePage {
         return this;
     }
     
-    // Other methods related to the Home Page
 }
 export default HomePage;

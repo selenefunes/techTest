@@ -6,7 +6,7 @@ import RegistrationPage from '../../support/pages/RegistrationPage';
 import ContactUsPage from '../../support/pages/ContactUsPage';
 import { userData } from '../../support/data/userData';
 
-describe('prueba-tecnica', () => {
+describe('technical-test', () => {
     const homePage = new HomePage();
     const productPage = new ProductPage();
     const cartPage = new CartPage();
@@ -14,7 +14,7 @@ describe('prueba-tecnica', () => {
     const registrationPage = new RegistrationPage();
     const contactUsPage = new ContactUsPage();
 
-    it('passes', () => {
+    it('challenge', () => {
         homePage.visit();
         homePage.selectProduct('Pure Cotton V-Neck T-Shirt');
         
@@ -25,8 +25,7 @@ describe('prueba-tecnica', () => {
         checkoutPage.proceedToCheckout();
         registrationPage.register(userData);
 
-        // Repeat cart actions after registration
-        cartPage.viewCart()
+        cartPage.viewCart2()
                 .proceedToCheckout();
 
         checkoutPage.fillInCheckoutDetails('Put a bow, it\'s a gift')
@@ -39,15 +38,8 @@ describe('prueba-tecnica', () => {
                        expiryYear: '2030'
                    });
 
-        // Contact us after placing order
-        contactUsPage.submitContactForm({
-            name: 'Selene',
-            email: userData.email,
-            subject: 'Hello',
-            message: 'test'
-        });
+      
 
-        // Logout and Login actions can also be refactored into respective page objects if needed
         cy.contains('Logout').click();
 
         cy.contains('Signup / Login').click();
@@ -62,6 +54,7 @@ describe('prueba-tecnica', () => {
             message: 'test'
         });
 
-        cy.contains('Logout').click();
+        cy.contains('Delete Account').click();
+
     });
 });
