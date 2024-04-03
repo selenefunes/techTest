@@ -16,4 +16,4 @@ module.exports = defineConfig({
     },
     specPattern: 'cypress/integration/**/*.spec.js',
   },
-});
+}); 
