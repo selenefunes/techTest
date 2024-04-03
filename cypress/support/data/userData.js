@@ -15,6 +15,4 @@ export const userData = {
     zipcode: '1234',
     mobileNumber: '123456789',
 
-    // Add other necessary user details here
-    // ...
 };
